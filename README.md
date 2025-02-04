@@ -458,11 +458,7 @@ model = smp.Unet('resnet34', encoder_depth=4)
 ### 🛠 Installation <a name="installation"></a>
 PyPI version:
 ```bash
-$ pip install segmentation-models-pytorch
-````
-Latest version from source:
-```bash
-$ pip install git+https://github.com/qubvel/segmentation_models.pytorch
+$ pip install segmentation-models-pytorch@git+https://github.com/EdwinKimsal/segmentation_models.pytorch
 ````
 
 ### 🏆 Competitions won with the library
