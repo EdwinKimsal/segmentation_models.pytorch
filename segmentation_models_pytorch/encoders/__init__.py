@@ -27,7 +27,7 @@ from .timm_universal import TimmUniversalEncoder
 from ._preprocessing import preprocess_input
 
 encoders = {}
-encoders.update(resnet_encoders)
+encoders.update(resnet_encoders) # PATH
 encoders.update(dpn_encoders)
 encoders.update(vgg_encoders)
 encoders.update(senet_encoders)
