@@ -116,10 +116,10 @@ for model_name, sources in new_settings.items():
     for source_name, source_url in sources.items():
         pretrained_settings[model_name][source_name] = {
             "url": source_url,
-            "input_size": [4, 224, 224], # REPLACE (first ele with 3 or 4)
+            "input_size": [3, 224, 224], # REPLACE (first ele with 3 or 4)
             "input_range": [0, 1],
-            "mean": [0.485, 0.456, 0.406, .44], # REPLACE (add/del last ele)
-            "std": [0.229, 0.224, 0.225, .22], # REPLACE (add/del last ele)
+            "mean": [0.485, 0.456, 0.406], # REPLACE (add/del last ele)
+            "std": [0.229, 0.224, 0.225], # REPLACE (add/del last ele)
             "num_classes": 1000,
         }
 
@@ -174,7 +174,7 @@ resnet_encoders = {
         "encoder": ResNetEncoder,
         "pretrained_settings": pretrained_settings["resnext50_32x4d"], # PATH
         "params": {
-            "out_channels": (4, 64, 256, 512, 1024, 2048), # REPLACE (first ele to 3 or 4)
+            "out_channels": (3, 64, 256, 512, 1024, 2048), # REPLACE (first ele to 3 or 4)
             "block": Bottleneck,
             "layers": [3, 4, 6, 3],
             "groups": 32,
